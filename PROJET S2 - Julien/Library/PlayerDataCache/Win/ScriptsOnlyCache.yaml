@@ -9,6 +9,10 @@ ScriptsOnlyBuild:
     - PlayerManager
     - RoomListItem
     - RoomManager
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -56,6 +60,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -94,55 +100,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11646}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11740}
+      Script: {instanceID: 11638}
     - Class: 114
-      Script: {instanceID: 11956}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11948}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12266}
+      Script: {instanceID: 12128}
     - Class: 114
-      Script: {instanceID: 12398}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 12490}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12624}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 12842}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12948}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 13304}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 13078}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 13226}
     - Class: 114
-      Script: {instanceID: 17082}
+      Script: {instanceID: 13302}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,6 +188,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerManager
   - hash:
       serializedVersion: 2
       Hash: ab039a385ef4459756519a3fe91dccc6
@@ -472,6 +484,18 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: dc3399e5e0fe791a1e2d0283f4e66b97
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: b6949dac66648e233e03fa1436bdbb72
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement
+  - hash:
+      serializedVersion: 2
       Hash: 57d2b3ca58a430f7cf319bb757c1f0f5
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -566,6 +590,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: TextButtonTransition
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoomManager
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -802,6 +832,12 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
+      Hash: 655675a941ea756088027703b43352a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseLook
+  - hash:
+      serializedVersion: 2
       Hash: 2aeeec1b1a144c469cd2d37776bc2315
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -848,39 +884,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RoomManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerManager
-  - hash:
-      serializedVersion: 2
-      Hash: 7902d6beaabab612c8178f4962205071
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 655675a941ea756088027703b43352a4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MouseLook
-  - hash:
-      serializedVersion: 2
-      Hash: b6949dac66648e233e03fa1436bdbb72
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerMovement
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menus.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Juju/Desktop/Juju/Ecole/EPITA/2020-2021/PROJET S2/PROJET S2
-    - Julien/Build/PROJET S2 - Julien.exe
+  playerPath: C:/Users/Juju/Desktop/Juju/Ecole/EPITA/2020-2021/PROJET S2/Julien/PROJET
+    S2 - Julien/Build/PROJET S2 - Julien.exe

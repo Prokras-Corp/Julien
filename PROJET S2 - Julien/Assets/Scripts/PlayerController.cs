@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float sprintFactor = 1.75f;
 
     //Ground Checking Variables
     public Transform groundCheck;
@@ -72,7 +73,11 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 move = transform.right * x + transform.forward * z;
-        cc.Move(move.normalized * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftShift))
+            cc.Move(move.normalized * speed * sprintFactor * Time.deltaTime);
+        else
+            cc.Move(move.normalized * speed * Time.deltaTime);
+
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
