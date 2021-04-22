@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - PlayerManager
     - RoomListItem
     - RoomManager
+    - TriggerLevel
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
@@ -60,13 +61,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11690}
+    - Class: 114
+      Script: {instanceID: 11926}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -114,13 +121,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11810}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11940}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12444}
     - Class: 114
       Script: {instanceID: 12510}
     - Class: 114
@@ -150,7 +157,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13898}
     - Class: 114
-      Script: {instanceID: 13994}
+      Script: {instanceID: 13992}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -396,6 +403,12 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
+      Hash: c9b96aaf80880ff7745b49061f226972
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TriggerLevel
+  - hash:
+      serializedVersion: 2
       Hash: 01af2a1ccde6f5a3777877fce1d85576
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -514,12 +527,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: b6949dac66648e233e03fa1436bdbb72
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerMovement
   - hash:
       serializedVersion: 2
       Hash: 57d2b3ca58a430f7cf319bb757c1f0f5
@@ -880,12 +887,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
-  - hash:
-      serializedVersion: 2
-      Hash: 655675a941ea756088027703b43352a4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MouseLook
   - hash:
       serializedVersion: 2
       Hash: 2aeeec1b1a144c469cd2d37776bc2315
