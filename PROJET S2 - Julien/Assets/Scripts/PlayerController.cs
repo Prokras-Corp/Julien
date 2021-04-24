@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         if(!PV.IsMine)
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);

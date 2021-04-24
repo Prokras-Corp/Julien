@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - PlayerManager
     - RoomListItem
     - RoomManager
+    - SetLevel
     - TriggerLevel
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
@@ -66,12 +67,36 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11316}
+    - Class: 114
+      Script: {instanceID: 11344}
+    - Class: 114
+      Script: {instanceID: 11646}
+    - Class: 114
       Script: {instanceID: 11926}
+    - Class: 114
+      Script: {instanceID: 13092}
+    - Class: 114
+      Script: {instanceID: 13370}
+    - Class: 114
+      Script: {instanceID: 13454}
+    - Class: 114
+      Script: {instanceID: 62486}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/Menus.unity:
     - Class: 1
@@ -397,7 +422,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: c9b96aaf80880ff7745b49061f226972
+      Hash: 35ec97400fd57993e189a9a878318af3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TriggerLevel
@@ -929,6 +954,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3070032923d36437d483773044fa0f55
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetLevel
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menus.unity

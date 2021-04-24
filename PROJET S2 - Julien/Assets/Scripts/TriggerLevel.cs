@@ -5,12 +5,10 @@ using Photon.Pun;
 
 public class TriggerLevel : MonoBehaviour
 {
-    [SerializeField] GameObject map;
-    [SerializeField] GameObject toActivate;
-
+    [SerializeField] GameObject menu;
     private void OnTriggerEnter(Collider other)
     {
-        map.SetActive(false);
-        toActivate.SetActive(true);
+        menu.SetActive(true);
+        Cursor.visible = true;
     }
 }

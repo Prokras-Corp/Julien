@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Photon.Pun;
 using System.IO;
+using UnityEngine.EventSystems;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class PlayerManager : MonoBehaviour
         if(PV.IsMine)
         {
             CreateController();
+        }
+        if (FindObjectOfType<EventSystem>() == null)
+        {
+            var eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         }
     }
 

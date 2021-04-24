@@ -124,4 +124,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);   //L'ajoute dans l'affichage
     }
+
+    public void HideCursor()
+    {
+        Cursor.visible = false;
+    }
 }
