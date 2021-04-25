@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour
                 CharacterLook();
                 CharacterMovement();
                 HandleHookshotStart();
+                HandleBracelet();
                 break;
             case State.HookshotFlyingPlayer:
                 CharacterLook();
@@ -156,6 +157,15 @@ public class PlayerController : MonoBehaviour
         {
             state = State.Normal;
             velocity.y = -2f;
+        }
+    }
+
+    void HandleBracelet()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GameObject gate = GameObject.FindGameObjectWithTag("gate");
+            gate.transform.eulerAngles = new Vector3(gate.transform.eulerAngles.x, gate.transform.eulerAngles.y + 180, gate.transform.eulerAngles.z);
         }
     }
 }
