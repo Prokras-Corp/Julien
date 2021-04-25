@@ -17,6 +17,11 @@ ScriptsOnlyBuild:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
+    Unity.ProBuilder.Editor.dll:
+    - UnityEditor.ProBuilder.EditorToolbar
+    - UnityEditor.ProBuilder.ProBuilderEditor
+    Unity.ProBuilder.dll:
+    - UnityEngine.ProBuilder.ProBuilderMesh
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -62,6 +67,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -73,15 +80,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11646}
     - Class: 114
+      Script: {instanceID: 11860}
+    - Class: 114
       Script: {instanceID: 11926}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13454}
+      Script: {instanceID: 13374}
     - Class: 114
-      Script: {instanceID: 62486}
+      Script: {instanceID: 13458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,37 +155,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12510}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 12624}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12784}
     - Class: 114
-      Script: {instanceID: 12830}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13110}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13374}
     - Class: 114
-      Script: {instanceID: 13454}
+      Script: {instanceID: 13458}
     - Class: 114
-      Script: {instanceID: 13466}
+      Script: {instanceID: 13470}
     - Class: 114
-      Script: {instanceID: 13520}
+      Script: {instanceID: 13524}
     - Class: 114
-      Script: {instanceID: 13696}
+      Script: {instanceID: 13700}
     - Class: 114
-      Script: {instanceID: 13898}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 13992}
+      Script: {instanceID: 13996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -542,7 +551,13 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: dc3399e5e0fe791a1e2d0283f4e66b97
+      Hash: 3070032923d36437d483773044fa0f55
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetLevel
+  - hash:
+      serializedVersion: 2
+      Hash: 595d21c67b494b979bdcfd8c08adc606
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -720,6 +735,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 03755c0cc7d8f4b8ee3604b0d62fb868
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HookshotController
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -954,12 +975,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 3070032923d36437d483773044fa0f55
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SetLevel
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menus.unity

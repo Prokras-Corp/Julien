@@ -14,13 +14,13 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
-        if(PV.IsMine)
-        {
-            CreateController();
-        }
         if (FindObjectOfType<EventSystem>() == null)
         {
             var eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+        }
+        if (PV.IsMine)
+        {
+            CreateController();
         }
     }
 

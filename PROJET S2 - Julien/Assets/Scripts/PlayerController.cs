@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,11 +13,12 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
     public float sprintFactor = 1.75f;
-
+    
     //Ground Checking Variables
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public LayerMask noRay;
     bool isGrounded;
 
     //Gravity vector
@@ -30,11 +32,23 @@ public class PlayerController : MonoBehaviour
 
     PhotonView PV;
 
+    //Grapple Vars
+    enum State
+    {
+        Normal,
+        HookshotFlyingPlayer,
+    }
+    private State state;
+    private Vector3 HookshotPosition;
+
 
     private void Awake()
     {
         cc = GetComponent<CharacterController>();
         PV = GetComponent<PhotonView>();
+
+        //Grapple stuff
+        state = State.Normal;
     }
 
     void Start()
@@ -52,18 +66,30 @@ public class PlayerController : MonoBehaviour
     {
         if (!PV.IsMine)
             return;
-        Move();
-        Look();
+        //Move();
+        //Look();
+
+        //Grapple stuff
+        switch(state)
+        {
+            default:
+            case State.Normal:
+                CharacterLook();
+                CharacterMovement();
+                HandleHookshotStart();
+                break;
+            case State.HookshotFlyingPlayer:
+                CharacterLook();
+                HandleHookshotMovement();
+                break;
+        }
     }
 
-
     //player movement
-
-
-    void Move()
+    void CharacterMovement()
     {
         //Ground Check
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask)  || Physics.CheckSphere(groundCheck.position, groundDistance, noRay);
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -89,9 +115,7 @@ public class PlayerController : MonoBehaviour
         cc.Move(velocity * Time.deltaTime);
     }
 
-
-
-    void Look()
+    void CharacterLook()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -101,5 +125,37 @@ public class PlayerController : MonoBehaviour
 
         cameraHolder.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+
+    private void HandleHookshotStart()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (Physics.Raycast(cameraHolder.transform.position, cameraHolder.transform.forward, out RaycastHit raycastHit))
+            {
+                HookshotPosition = raycastHit.point;
+                state = State.HookshotFlyingPlayer;
+            }
+        }
+    }
+
+    private void HandleHookshotMovement()
+    {
+        Vector3 HookshotDir = (HookshotPosition - cc.transform.position).normalized;
+
+        float HookshotSpeedMin = 20f;
+        float HookshotSpeedMax = 40f;
+
+        float HookshotSpeed = Mathf.Clamp(Vector3.Distance(cc.transform.position, HookshotPosition), HookshotSpeedMin, HookshotSpeedMax);
+        float SpeedMultiplier = 3f;
+
+        cc.Move(HookshotDir * HookshotSpeed * SpeedMultiplier * Time.deltaTime);
+
+        float ReachedHookshotPositionDistance = 4f;
+        if(Vector3.Distance(cc.transform.position, HookshotPosition) < ReachedHookshotPositionDistance)
+        {
+            state = State.Normal;
+            velocity.y = -2f;
+        }
     }
 }

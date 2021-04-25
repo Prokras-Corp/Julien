@@ -129,4 +129,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         Cursor.visible = false;
     }
+
+    public void doExitGame()
+    {
+        Application.Quit();
+    }
 }
