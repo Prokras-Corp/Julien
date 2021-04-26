@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - gate
+  - MenuLevel
+  - Foret
+  - torch
+  - KEYGATE
+  - KEYGATER
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Char
   - 
   - 
   - 

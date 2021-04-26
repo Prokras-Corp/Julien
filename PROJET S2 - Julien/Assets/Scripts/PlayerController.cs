@@ -41,6 +41,20 @@ public class PlayerController : MonoBehaviour
     private State state;
     private Vector3 HookshotPosition;
 
+    [SerializeField] GameObject torch;
+
+    //enum KeyState
+    //{
+    //    Normal,
+    //    MovingDoors,
+    //}
+    //private KeyState keyState;
+    //float minDistance = 6f;
+    //GameObject gateL;
+    //GameObject gateR;
+    //Vector3 finalL;
+    //Vector3 finalR;
+
 
     private void Awake()
     {
@@ -49,6 +63,9 @@ public class PlayerController : MonoBehaviour
 
         //Grapple stuff
         state = State.Normal;
+        //gateL = GameObject.FindGameObjectWithTag("KEYGATE");
+        //gateR = GameObject.FindGameObjectWithTag("KEYGATER");
+        //keyState = KeyState.Normal;
     }
 
     void Start()
@@ -78,6 +95,17 @@ public class PlayerController : MonoBehaviour
                 CharacterMovement();
                 HandleHookshotStart();
                 HandleBracelet();
+                HandleTorch();
+                //switch(keyState)
+                //{
+                //    default:
+                //    case KeyState.Normal:
+                //        HandleKey();
+                //        break;
+                //    case KeyState.MovingDoors:
+                //        HandleDoors();
+                //        break;
+                //}
                 break;
             case State.HookshotFlyingPlayer:
                 CharacterLook();
@@ -168,4 +196,40 @@ public class PlayerController : MonoBehaviour
             gate.transform.eulerAngles = new Vector3(gate.transform.eulerAngles.x, gate.transform.eulerAngles.y + 180, gate.transform.eulerAngles.z);
         }
     }
+
+    void HandleTorch()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (torch.activeInHierarchy)
+            {
+                torch.SetActive(false);
+            }
+            else
+            {
+                torch.SetActive(true);
+            }
+        }
+    }
+
+    //void HandleKey()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Alpha3))
+    //    {
+    //        finalL = new Vector3(gateL.transform.position.x, gateL.transform.position.y, gateL.transform.position.z - 1.2f);
+    //        finalR = new Vector3(gateL.transform.position.x, gateL.transform.position.y, gateL.transform.position.z + 1.2f);
+    //        keyState = KeyState.MovingDoors;
+    //    }
+    //}
+
+    //void HandleDoors()
+    //{
+    //    gateL.transform.position = Vector3.MoveTowards(gateL.transform.position, finalL, 2 * Time.deltaTime);
+    //    gateR.transform.position = Vector3.MoveTowards(gateR.transform.position, finalR, 2 * Time.deltaTime);
+
+    //    if (Vector3.Distance(finalL, gateL.transform.position) < minDistance)
+    //    {
+    //        keyState = KeyState.Normal;
+    //    }
+    //}
 }
