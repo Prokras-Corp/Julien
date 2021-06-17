@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviour
         if (FindObjectOfType<EventSystem>() == null)
         {
             var eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+            //Pour menus
         }
         if (PV.IsMine)
         {
@@ -27,5 +28,6 @@ public class PlayerManager : MonoBehaviour
     void CreateController()
     {
         PhotonNetwork.Instantiate(Path.Combine("Photon Prefabs", "PlayerController"), Vector3.zero, Quaternion.identity);
+        //Met le prefab dans la scène
     }
 }

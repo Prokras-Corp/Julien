@@ -18,11 +18,11 @@ public class nav : MonoBehaviour
         Vector3 position = agent.transform.position;
         Vector3 destination = target.transform.position;
 
-        agent.SetDestination(destination);
-
         if (Vector3.Distance(position, destination) < DistanceSociale)
         {
             agent.SetDestination(position);
         }
+        else
+            agent.SetDestination(destination);
     }
 }

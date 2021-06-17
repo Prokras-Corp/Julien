@@ -10,6 +10,7 @@ TagManager:
   - torch
   - KEYGATE
   - KEYGATER
+  - grap
   layers:
   - Default
   - TransparentFX
