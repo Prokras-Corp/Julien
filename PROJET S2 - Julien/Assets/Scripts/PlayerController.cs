@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController cc;
+    public Animator anim;
 
     //Movement Variables
     public float speed = 12f;
@@ -33,12 +34,12 @@ public class PlayerController : MonoBehaviour
     PhotonView PV;
 
     //Grapple Vars
-    enum State
+    public enum State
     {
         Normal,
         HookshotFlyingPlayer,
     }
-    private State state;
+    public State state;
     private Vector3 HookshotPosition;
 
     [SerializeField] GameObject torch;
@@ -96,6 +97,7 @@ public class PlayerController : MonoBehaviour
                 HandleHookshotStart();
                 HandleBracelet();
                 HandleTorch();
+                HandleAnim();
                 //switch(keyState)
                 //{
                 //    default:
@@ -110,6 +112,7 @@ public class PlayerController : MonoBehaviour
             case State.HookshotFlyingPlayer:
                 CharacterLook();
                 HandleHookshotMovement();
+                HandleAnim();
                 break;
         }
     }
@@ -208,6 +211,41 @@ public class PlayerController : MonoBehaviour
             else
             {
                 torch.SetActive(true);
+            }
+        }
+    }
+
+    void HandleAnim()
+    {
+        if (state == State.HookshotFlyingPlayer)
+        {
+            anim.SetBool("IsGrounded", true);
+            anim.SetBool("Walking", false);
+            anim.SetBool("Running", false);
+            anim.SetBool("Grappin", true);
+        }
+        else
+        {
+            anim.SetBool("Grappin", false);
+            if (!isGrounded)
+            {
+                anim.SetBool("Walking", false);
+                anim.SetBool("Running", false);
+                anim.SetBool("IsGrounded", false);
+            }
+            else
+            {
+                anim.SetBool("IsGrounded", true);
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+                {
+                    anim.SetBool("Walking", true);
+                    anim.SetBool("Running", Input.GetKey(KeyCode.LeftShift));
+                }
+                else
+                {
+                    anim.SetBool("Walking", false);
+                    anim.SetBool("Running", false);
+                }
             }
         }
     }
