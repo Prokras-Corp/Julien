@@ -121,6 +121,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 98b1a6a65da314e45801d912a250b238, type: 2}
+--- !u!1001 &27266091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 662647309990795153, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633850540565339962, guid: d9bb67d16e6225946a323f3402bcbd7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9bb67d16e6225946a323f3402bcbd7d, type: 3}
 --- !u!43 &142569352
 Mesh:
   m_ObjectHideFlags: 0
@@ -1115,7 +1184,7 @@ RectTransform:
   - {fileID: 1916998642}
   - {fileID: 2069634530}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2192,6 +2261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_MeshFormatVersion: 1
   m_Faces:
   - m_Indexes: 020000000000000001000000020000000300000000000000
@@ -2969,6 +3039,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 83c807bffcbe63432c6f61e8aa010eb044848747
 --- !u!1 &837904998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3457,7 @@ Transform:
   - {fileID: 837904999}
   - {fileID: 1798860931}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005022316
 GameObject:
@@ -3591,7 +3663,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 57.617004, y: -59.63, z: 134.705}
 --- !u!43 &1291513927
 Mesh:
@@ -5287,7 +5359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2033040589
 Transform:
   m_ObjectHideFlags: 0
@@ -5306,7 +5378,7 @@ Transform:
   - {fileID: 543450652552910708}
   - {fileID: 2686825020494828674}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069634529
 GameObject:
@@ -5559,6 +5631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_MeshFormatVersion: 1
   m_Faces:
   - m_Indexes: 000000000100000002000000010000000300000002000000
@@ -5763,6 +5836,8 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+=======
+>>>>>>> 83c807bffcbe63432c6f61e8aa010eb044848747
 --- !u!1 &6880540859477825
 GameObject:
   m_ObjectHideFlags: 0
@@ -9065,7 +9140,7 @@ Transform:
   - {fileID: 5710778457158432466}
   - {fileID: 8576271381825300594}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -180.04599, z: 0}
 --- !u!23 &1151778015293156856
 MeshRenderer:
